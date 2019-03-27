@@ -1,6 +1,6 @@
 package wordofday.schedule
 
-import wordofday.controller.WordOfDayController
+//import wordofday.crawler.WordOfDayCrawler
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.scheduling.annotation.EnableScheduling
 import org.springframework.scheduling.annotation.Scheduled
@@ -12,13 +12,13 @@ const val ON_EACH_TEN_SECONDS = "*/10 * * * * * "
 
 const val TIME_ZONE_SP = "America/Sao_Paulo"
 
-@Component
-@EnableScheduling
-class TimeScheduler {
-
-    @Autowired
-    lateinit var wordOfDayController: WordOfDayController
-
-    @Scheduled(cron = ON_EACH_TEN_SECONDS, zone = TIME_ZONE_SP)
-    fun getWordOfDay() = wordOfDayController.get()//println(LocalDateTime.now())
-}
+//@Component
+//@EnableScheduling
+//class TimeScheduler {
+//
+//    @Autowired
+//    lateinit var wordOfDayController: WordOfDayCrawler
+//
+//    @Scheduled(cron = ON_EACH_TEN_SECONDS, zone = TIME_ZONE_SP)
+//    fun getWordOfDay() = wordOfDayController.get()//println(LocalDateTime.now())
+//}

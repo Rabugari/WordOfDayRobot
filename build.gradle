@@ -36,11 +36,13 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web"
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
+    //telegram bot
+    //implementation 'com.github.pengrad:java-telegram-bot-api:4.1.1'
+    implementation "org.telegram:telegrambots-spring-boot-starter:4.1.2"
+    
     //crawler
-// https://mvnrepository.com/artifact/org.jsoup/jsoup
-    compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
-
-
+    //compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
+    implementation 'org.jsoup:jsoup:1.11.3'
 }
 
 compileKotlin {
